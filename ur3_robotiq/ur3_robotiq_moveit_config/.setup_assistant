@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: ur3_robotiq_description
+    relative_path: urdf/ur3_robotiq_robot.urdf.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/ur10e_robotiq.srdf
+  CONFIG:
+    author_name: Samuele Sandrini
+    author_email: samuele.sandrini@polito.it
+    generated_timestamp: 1652118974
