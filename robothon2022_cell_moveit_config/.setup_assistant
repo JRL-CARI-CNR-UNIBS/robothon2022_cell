@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: robothon2022_description
+    relative_path: urdf/robothon.xacro
+    xacro_args: ""
+  SRDF:
+    relative_path: config/robothon.srdf
+  CONFIG:
+    author_name: Cesare Sandrini
+    author_email: samuele.tonola@unibs.it
+    generated_timestamp: 1652281302

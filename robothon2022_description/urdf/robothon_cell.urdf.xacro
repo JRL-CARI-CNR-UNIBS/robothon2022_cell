@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robothon_cell" >
+
+<xacro:macro name="robothon_cell" params=
+ "prefix:=''
+  kinematics_parameters_file:='$(find ur_description)/config/ur3/default_kinematics.yaml'
+  joint_limits_parameters_file:='$(find ur_description)/config/ur3/joint_limits.yaml'
+  physical_parameters_file:='$(find ur_description)/config/ur3/physical_parameters.yaml'
+  transmission_hw_interface:=hardware_interface/PositionJointInterface
+  safety_limits:=false
+  safety_pos_margin:=0.15
+  safety_k_position:=20 ">
+
+  <xacro:property name="grey" value="0.517647058823529	0.529411764705882	0.537254901960784 1" />
+
+  <link name="table">
+     <visual>
+       <origin xyz="${0} ${0} ${0}" rpy="0 0 0" />
+       <geometry>
+         <box size="${2} ${2} ${0.15}" />
+       </geometry>
+       <material name="Grey">
+         <color rgba="${grey}"/>
+       </material>
+     </visual>
+     <collision>
+       <origin xyz="${0} ${0} ${0}" rpy="0 0 0" />
+       <geometry>
+         <box size="${2} ${2} ${0.15}" />
+       </geometry>
+       <material name="Grey">
+         <color rgba="${grey}"/>
+       </material>
+     </collision>
+   </link>
+
+   <!-- <joint name="world_to_robot" type="fixed">
+     <parent link="world"/>
+     <child link="base_link"/>
+     <origin xyz="0 0 0"/>
+   </joint> -->
+
+   <joint name="table_to_robot" type="fixed">
+     <parent link="table"/>
+     <child link="base_link"/>
+     <origin xyz="0 0 0"/>
+   </joint>
+
+  <xacro:include filename="$(find ur3_robotiq_description)/urdf/ur3_robotiq.urdf.xacro"/>
+
+  <xacro:ur3_robotiq
+    kinematics_parameters_file = "${kinematics_parameters_file}"
+  />
+</xacro:macro>
+
+</robot>

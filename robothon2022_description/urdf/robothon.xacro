@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="robothon" >
+
+  <!-- Robothon cell -->
+  <xacro:include filename="$(find robothon2022_description)/urdf/robothon_cell.urdf.xacro" />
+
+  <xacro:robothon_cell
+    kinematics_parameters_file='$(find robothon2022_configurations)/config/calibration.yaml'
+  /> <!--DO NOT DELETE -->
+</robot>
