@@ -2,7 +2,6 @@
 
 <launch>
 <arg name="fake" default="true"/>
-<arg name="kinematics_config" default="$(find sharework_cembre_description)/config/cembre_ur3.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
 <arg name="controllers_configurations" default="$(find robothon2022_configurations)/config/calibration.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
 <arg name="controllers_dispatches" default="$(find robothon2022_configurations)/config/controllers_dispatches.yaml"/>
 
