@@ -45,6 +45,11 @@
 <arg name="pipeline" default="ompl"/>
 <arg name="run_moveit" default="true"/>
 <arg name="run_control" default="true"/>
+
+<!-- Vision System Launch file -->
+<include file="$(find robothon2022_vision)/launch/start_camera.launch"/>
+<include file="$(find robothon2022_vision)/launch/camera_calibration.launch"/>
+
 <include file="$(find robothon2022_configurations)/launch/start.launch">
   <arg name="fake" value="false"/>
   <arg name="pipeline" value="$(arg pipeline)"/>
@@ -52,9 +57,7 @@
   <arg name="run_control" default="$(arg run_control)"/>
 </include>
 
-<!-- Vision System Launch file -->
-<include file="$(find robothon2022_vision)/launch/camera_calibration.launch"/>
-<include file="$(find robothon2022_vision)/launch/start_camera.launch"/>
+
 
 <!-- <node if="$(arg run_control)" pkg="robotiq_ur_modbus"  type="test_robotiq_ros.py" name="robotiq_ur_modbus" args="robotiq_gripper" output="screen">
    <param name="debug_flag" value="False" />
