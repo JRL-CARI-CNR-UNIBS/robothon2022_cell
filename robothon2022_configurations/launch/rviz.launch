@@ -2,7 +2,7 @@
 
 <launch>
 <include file="$(find robothon2022_cell_moveit_config)/launch/moveit_rviz.launch" >
-  <arg name="rviz_config" value="$(find robothon2022_cell_moveit_config)/launch/moveit.rviz"/>
+  <arg name="rviz_config" value="$(find robothon2022_configurations)/config/config.rviz"/>
 </include>
 
 </launch>

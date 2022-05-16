@@ -5,7 +5,7 @@
 <arg name="fake" default="true"/>
 <arg name="run_moveit" default="true"/>
 <arg name="run_control" default="true"/>
-<!-- <arg name="rviz_config" default="$(find robothon2022_configurations)/launch/control.rviz"/> -->
+<arg name="rviz_config" default="$(find robothon2022_configurations)/config/config.rviz"/>
 <arg name="controllers_configurations" default="$(find robothon2022_configurations)/config/controllers_configurations.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
 <arg name="controllers_dispatches" default="$(find robothon2022_configurations)/config/controllers_dispatches.yaml"/>
 

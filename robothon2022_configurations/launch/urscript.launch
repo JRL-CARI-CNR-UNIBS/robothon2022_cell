@@ -3,7 +3,7 @@
 <launch>
 <arg name="pipeline" default="ompl"/>
 <arg name="fake" default="false"/>
-<!-- <arg name="rviz_config" default="$(find robothon2022_configurations)/launch/control.rviz"/> -->
+<arg name="rviz_config" default="$(find robothon2022_configurations)/config/config.rviz"/>
 <arg name="controllers_configurations" default="$(find robothon2022_configurations)/config/controllers_configurations.yaml" doc="Kinematics config file used for calibration correction. This will be used to verify the robot's calibration is matching the robot_description."/>
 <arg name="controllers_dispatches" default="$(find robothon2022_configurations)/config/ur_script_controllers_dispatches.yaml"/>
 
@@ -15,6 +15,6 @@
 
 <include file="$(find robothon2022_configurations)/launch/moveit.launch">
   <arg name="pipeline" value="$(arg pipeline)"/>
-  <!-- <arg name="rviz_config" value="$(arg rviz_config)"/> -->
+  <arg name="rviz_config" value="$(arg rviz_config)"/>
 </include>
 </launch>
