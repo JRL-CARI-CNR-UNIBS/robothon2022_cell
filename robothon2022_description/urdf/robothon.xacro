@@ -4,6 +4,14 @@
   <!-- Robothon cell -->
   <xacro:include filename="$(find robothon2022_description)/urdf/robothon_cell.urdf.xacro" />
 
+  <link name="world"/>
+
+  <joint name="world_to_table" type="fixed">
+    <parent link="world"/>
+    <child link="table"/>
+    <origin xyz="0 0 0"/>
+  </joint>
+
   <xacro:robothon_cell
     kinematics_parameters_file='$(find robothon2022_configurations)/config/calibration.yaml'
   /> <!--DO NOT DELETE -->

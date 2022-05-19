@@ -28,21 +28,15 @@ control_configurations:
   components:
   - {hardware_interface: "planner_hw", controller: "microinterpolator", description: ""}
 
-- name: "impedance"
-  depends: ["watch"]
-  components:
-  - {hardware_interface: "ur3_hw", controller: "cart_impedance", description: "",  runtime_check: false} # disable check controller status
-
-- name: "trajectory_tracking_impedance"
-  depends: ["impedance"]
-  components:
-  - {hardware_interface: "planner_hw", controller: "microinterpolator_impedance", description: ""}
-
 - name: simple_touch
+  depends: ["cartesian_velocity"]
+  components:
+  - {hardware_interface: "planner_hw", controller: "simple_touch", runtime_check: false}
+
+- name: cartesian_velocity
   depends: ["watch"]
   components:
-    - {hardware_interface: "ur3_hw", controller: "cartesian_velocity"}
-    - {hardware_interface: "planner_hw", controller: "simple_touch", runtime_check: false}
+  - {hardware_interface: "ur3_hw", controller: "cartesian_velocity",  runtime_check: false}
 
 - name: cartesian_position
   depends: ["watch"]

@@ -1,0 +1,30 @@
+go_to_location:
+  - {name: "blue_button", frame: "world", position: [-0.104, -0.417, 0.300], quaternion: [0.705, 0.709, -0.009, 0.008]} #only as example
+  - {name: "red_button",  frame: "world", position: [-0.083, -0.422, 0.300], quaternion: [0.726, 0.687, 0.001, -0.010]} #only as example
+
+
+go_to_location_server:
+
+  ik_sol_number: 4
+  max_stall_iter: 100
+  collision_detector: FCL
+
+  groups:
+    manipulator: tool0
+
+  manipulator:
+    preferred_configuration: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+    #preferred_configuration: [-1.9769910017596644, -0.8349288266948243, -2.292120933532715, -1.6209961376585902, -1.5518959204303187, 0.5749483108520508]
+    preferred_configuration_weight: [1, 1, 1, 1, 1, 1]
+    max_ik_goal_number: 32
+    use_single_goal: false
+    upper_bound: [ 6.29,  6.29, 6.29,  6.29,  6.29,  12.5]
+    lower_bound: [-6.29, -6.29,-6.29, -6.29, -6.29, -12.5]
+
+
+  request_adapters:
+  - default_planner_request_adapters/AddTimeParameterization
+  - default_planner_request_adapters/FixWorkspaceBounds
+  - default_planner_request_adapters/FixStartStateBounds
+  - default_planner_request_adapters/FixStartStateCollision
+  - default_planner_request_adapters/FixStartStatePathConstraints
