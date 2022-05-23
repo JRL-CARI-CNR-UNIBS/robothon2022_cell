@@ -57,10 +57,9 @@
   <arg name="run_control" default="$(arg run_control)"/>
 </include>
 
-
-<node if="$(arg run_control)" pkg="robotiq_ur_modbus"  type="test_robotiq_ros.py" name="robotiq_ur_modbus" args="robotiq_gripper" output="screen">
+<!-- <node if="$(arg run_control)" pkg="robotiq_ur_modbus"  type="test_robotiq_ros.py" name="robotiq_ur_modbus" args="robotiq_gripper" output="screen">
    <param name="debug_flag" value="False" />
-</node>
+</node> -->
 
 <node name="speed_ovr" pkg="rostopic" type="rostopic"
   args="pub /speed_ovr std_msgs/Int64

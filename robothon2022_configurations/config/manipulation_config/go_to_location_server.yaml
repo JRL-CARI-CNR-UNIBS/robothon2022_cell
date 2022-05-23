@@ -1,6 +1,7 @@
 go_to_location:
   - {name: "blue_button", frame: "world", position: [-0.104, -0.417, 0.300], quaternion: [0.705, 0.709, -0.009, 0.008]} #only as example
   - {name: "red_button",  frame: "world", position: [-0.083, -0.422, 0.300], quaternion: [0.726, 0.687, 0.001, -0.010]} #only as example
+  - {name: "pick_key",    frame: "world", position: [0.047, -0.407, 0.300],  quaternion: [-0.004, 1.000, 0.003, 0.000]} #only as example
 
 
 go_to_location_server:

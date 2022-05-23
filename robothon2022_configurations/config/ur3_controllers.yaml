@@ -63,8 +63,6 @@ ur3_hw:
     controlled_joints : all
     kin_update_period : 0.008
     target_twist_topic: /target_cart_twist  # setpoint twist topic name
-    max_cartesian_linear_speed: 100000
-    max_cartesian_linear_acceleration: 100000
 
   cartesian_position:
     appenders: [file, screen]
@@ -75,7 +73,8 @@ ur3_hw:
     type: cnr/control/CartesianPositionController
     controlled_joints : all
     kin_update_period : 0.008
-    max_cartesian_linear_acceleration: 0.5
+    max_cartesian_linear_speed: 0.5
+    max_cartesian_linear_acceleration: 0.75
 
   ctrl1:
     type:        cnr/control/OpenLoopPositionController
