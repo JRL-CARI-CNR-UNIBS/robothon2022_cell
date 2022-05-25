@@ -18,7 +18,6 @@
   <param if="$(eval pipeline == 'ompl')" name="manipulator/planning_plugin" value="ompl_interface/OMPLPlanner" />
 </node>
 
-<node pkg="go_to_location"  type="go_to_location_loader" name="go_to_location_loader" output="screen"/>
 </launch>
 
 
