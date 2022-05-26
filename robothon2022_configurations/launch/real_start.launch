@@ -63,7 +63,7 @@
 
 <node name="speed_ovr" pkg="rostopic" type="rostopic"
   args="pub /speed_ovr std_msgs/Int64
- 'data: 50' -r 10"/>
+ 'data: 30' -r 10"/>
 
  <include file="$(find robothon2022_vision)/launch/board_location_service.launch"/>
 

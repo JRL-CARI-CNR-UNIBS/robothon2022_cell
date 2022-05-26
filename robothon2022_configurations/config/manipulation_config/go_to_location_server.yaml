@@ -1,18 +1,20 @@
 go_to_location:
-  - {name: "home",              frame: "world", position: [-0.255, -0.166, 0.335],   quaternion: [1.000, 0.009, -0.004, 0.017]}
-  # - {name: "reference",     frame: "board", position: [0.137, 0.094, -0.155],   quaternion: [0.000, 0.000, 0.959, -0.284]}
+  - {name: "home",              frame: "world",     position: [-0.255, -0.166, 0.335],quaternion: [1.000, 0.009, -0.004, 0.017]}
+  - {name: "magnet",            frame: "world",     position: [-0.298, -0.298, 0.317],quaternion: [0.000, 1.000, 0.000, 0.000]}
   - {name: "blue_button",       frame: "reference", position: [0.192, 0.006, -0.057], quaternion: [0.014, -0.014, 0.013, 1.000]}
   - {name: "red_button",        frame: "reference", position: [0.169, 0.006, -0.057], quaternion: [0.014, -0.014, 0.013, 1.000]}
   - {name: "pick_key",          frame: "reference", position: [0.041, 0.016, -0.062], quaternion: [-0.003, 0.003, -0.005, 1.000]}
-  - {name: "insert_key",        frame: "reference", position: [0.044, 0.084, -0.078], quaternion: [0.000, -0.001, 0.734, 0.679]}
-  - {name: "pick_ethernet_rot", frame: "reference", position: [0.174, 0.078, -0.038], quaternion: [-0.002, -0.316, -0.021, 0.948]}
+  - {name: "insert_key",        frame: "reference", position: [0.044, 0.085, -0.078], quaternion: [0.000, -0.001, 0.734, 0.679]}
+  - {name: "pick_ethernet_rot", frame: "reference", position: [0.174, 0.081, -0.100], quaternion: [-0.002, -0.316, -0.021, 0.948]}
   - {name: "batteries_AA_case", frame: "reference", position: [0.108, 0.019, -0.066], quaternion: [-0.005, 0.006, -0.004, 1.000]}
-  - {name: "coin_battery",      frame: "reference", position: [0.198, 0.093, -0.064], quaternion: [-0.001, -0.000, -0.009, 1.000]}
-
+  - {name: "coin_battery",      frame: "reference", position: [0.198, 0.092, -0.064], quaternion: [-0.001, -0.000, -0.009, 1.000]}
+  - {name: "first_battery",     frame: "reference", position: [0.078, -0.001, -0.100],quaternion: [-0.037, -0.013, -0.722, 0.691]}
+  - {name: "second_battery",    frame: "reference", position: [0.087, 0.036, -0.100], quaternion: [0.010, 0.007, -0.699, 0.715]}
+  - {name: "insert_first_battery",frame: "reference",position: [0.372, 0.133, 0.0124], quaternion: [0.600, -0.347, -0.372, 0.617]}
 
 go_to_location_server:
 
-  ik_sol_number: 4
+  ik_sol_number: 8
   max_stall_iter: 100
   collision_detector: FCL
 
@@ -25,9 +27,8 @@ go_to_location_server:
     preferred_configuration_weight: [1, 1, 1, 1, 1, 1]
     max_ik_goal_number: 32
     use_single_goal: false
-    upper_bound: [ 6.29,  6.29, 6.29,  6.29,  6.29,  12.5]
-    lower_bound: [-6.29, -6.29,-6.29, -6.29, -6.29, -12.5]
-
+    upper_bound: [  3.14,  3.14,  3.14,  3.14,  3.14,  3.14]
+    lower_bound: [ -3.14, -3.14, -3.14, -3.14, -3.14, -3.14]
 
   request_adapters:
   - default_planner_request_adapters/AddTimeParameterization

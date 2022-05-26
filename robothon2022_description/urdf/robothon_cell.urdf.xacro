@@ -4,7 +4,7 @@
 <xacro:macro name="robothon_cell" params=
  "prefix:=''
   kinematics_parameters_file:='$(find ur_description)/config/ur3/default_kinematics.yaml'
-  joint_limits_parameters_file:='$(find ur_description)/config/ur3/joint_limits.yaml'
+  joint_limits_parameters_file:='$(find robothon2022_configurations)/config/joint_limits.yaml'
   physical_parameters_file:='$(find ur_description)/config/ur3/physical_parameters.yaml'
   transmission_hw_interface:=hardware_interface/PositionJointInterface
   safety_limits:=false
@@ -44,6 +44,7 @@
 
   <xacro:ur3_robotiq
     kinematics_parameters_file = "${kinematics_parameters_file}"
+    joint_limits_parameters_file = "${joint_limits_parameters_file}"
   />
 
   <link name="roof">
@@ -70,8 +71,19 @@
    <joint name="robot_to_roof" type="fixed">
      <parent link="base_link"/>
      <child link="roof"/>
-     <origin xyz="0 0 0.65"/>
+     <origin xyz="0 -0.85 0.65"/>
    </joint>
+
+   <joint name="tool0_to_tip" type="fixed">
+     <parent link="tool0"/>
+     <child link="tip"/>
+     <origin xyz="0 0 0.157"/>
+   </joint>
+
+   <link name="tip">
+   </link>
+
+
 
 </xacro:macro>
 </robot>

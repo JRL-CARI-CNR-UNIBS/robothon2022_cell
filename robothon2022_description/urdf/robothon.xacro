@@ -14,5 +14,6 @@
 
   <xacro:robothon_cell
     kinematics_parameters_file='$(find robothon2022_configurations)/config/calibration.yaml'
+    joint_limits_parameters_file='$(find robothon2022_configurations)/config/joint_limits.yaml'
   /> <!--DO NOT DELETE -->
 </robot>
