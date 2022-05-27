@@ -1,0 +1,31 @@
+group_names_map:
+  mg1:  manipulator
+  mg2:  manipulator
+  mg3:  manipulator
+  mg4:  manipulator
+  goal_hamp_multigoal: manipulator
+  baseline_hamp_multigoal: manipulator
+  warp_strategy: manipulator
+  dirrt_paper:  manipulator
+  informed_rrt: manipulator
+  timebased: manipulator
+  dirrt_paper_warp: manipulator
+  # timebased:                     manipulator
+
+default_planner_config: mg1
+
+mg1:
+  type: Multigoal
+  max_distance: 2.0
+  max_refine_time: 3.0     # time for refine solution
+  utopia_tolerance: 0.003  # exit condition for early stop (cost< (1+utopia_tolerance) * distance)
+  # max_refine_time: 3.0   # time for refine solution
+  # utopia_tolerance: 0.05  # exit condition for early stop (cost< (1+utopia_tolerance) * distance)
+  rewire_radius: 4.0
+  extend: true
+  local_bias: 0.25
+  forgetting_factor: 0.999
+  tube_radius: 0.02
+  warp: false
+  warp_once: true
+  collision_distance: 0.0

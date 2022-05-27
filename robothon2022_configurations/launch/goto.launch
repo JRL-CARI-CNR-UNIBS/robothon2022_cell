@@ -16,6 +16,7 @@
 <node pkg="go_to_location"  type="go_to_location_server" name="go_to_location_server" output="screen" launch-prefix="$(arg launch_prefix)" >
   <param name="reference_frame" value="$(arg reference_frame)" />
   <param if="$(eval pipeline == 'ompl')" name="manipulator/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'dirrt')" name="manipulator/planning_plugin" value="pathplan/DIRRTStar" />
 </node>
 
 </launch>

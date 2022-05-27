@@ -68,6 +68,12 @@
     </include>
   </group>
 
+  <include ns="move_group" file="$(find robothon2022_cell_moveit_config)/launch/planning_pipeline.launch.xml">
+    <arg name="pipeline" value="$(arg pipeline)" />
+    <param name="capabilities" value="$(arg capabilities)"/>
+    <param name="disable_capabilities" value="$(arg disable_capabilities)"/>
+  </include>
+
   <!-- Trajectory Execution Functionality -->
   <include ns="move_group" file="$(dirname)/trajectory_execution.launch.xml" if="$(arg allow_trajectory_execution)">
     <arg name="moveit_manage_controllers" value="true" />
