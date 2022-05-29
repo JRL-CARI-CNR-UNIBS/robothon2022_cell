@@ -8,4 +8,4 @@ moveit_setup_assistant_config:
   CONFIG:
     author_name: Cesare Sandrini
     author_email: samuele.tonola@unibs.it
-    generated_timestamp: 1653698176
+    generated_timestamp: 1653845283

@@ -58,7 +58,7 @@
     <joint name="robot_to_box" type="fixed">
       <parent link="base_link"/>
       <child link="box"/>
-      <origin xyz="0.00 0.70 0.12"/>
+      <origin xyz="0.00 -0.70 0.12"/>
     </joint>
 
    <joint name="table_to_robot" type="fixed">
