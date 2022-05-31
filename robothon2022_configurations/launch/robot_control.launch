@@ -42,6 +42,8 @@
 
 </node>
 
+<node pkg="ur_direct_trj_server" type="fjt_as.py" name="fjt_as" output="screen" />
+
 <node pkg="cnr_configuration_manager" type="dispatcher" name="configuration_dispatcher" output="screen" >
 <rosparam>
   appenders: [screen]
