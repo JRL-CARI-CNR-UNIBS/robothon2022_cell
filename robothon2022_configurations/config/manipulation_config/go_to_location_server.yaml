@@ -1,12 +1,9 @@
 go_to_location:
   - {name: "home",              frame: "world",     position: [-0.255, -0.166, 0.335],quaternion: [1.000, 0.009, -0.004, 0.017]}
-  # - {name: "magnet",            frame: "world",     position: [-0.298, -0.298, 0.317],quaternion: [0.000, 1.000, 0.000, 0.000]}
   - {name: "blue_button",       frame: "reference", position: [0.192, 0.006, -0.057], quaternion: [0.014, -0.014, 0.013, 1.000]}
   - {name: "red_button",        frame: "reference", position: [0.170, 0.006, -0.057], quaternion: [0.014, -0.014, 0.013, 1.000]}
-
-  # - {name: "red_button",        frame: "reference", position: [0.169, 0.006, -0.057], quaternion: [0.014, -0.014, 0.013, 1.000]}
-  - {name: "pick_key",          frame: "reference", position: [0.039, 0.016, -0.062], quaternion: [-0.003, 0.003, -0.005, 1.000]}
-  # - {name: "insert_key",        frame: "reference", position: [0.044, 0.085, -0.078], quaternion: [0.000, -0.001, 0.734, 0.679]}
+  - {name: "pick_key",          frame: "reference", position: [0.040, 0.016, -0.062], quaternion: [-0.003, 0.003, -0.005, 1.000]}
+  # - {name: "pick_key",          frame: "reference", position: [0.039, 0.016, -0.062], quaternion: [-0.003, 0.003, -0.005, 1.000]}
   - {name: "pick_ethernet_rot", frame: "reference", position: [0.172, 0.081, -0.100], quaternion: [-0.002, -0.316, -0.021, 0.948]}
   - {name: "batteries_AA_case", frame: "reference", position: [0.108, 0.019, -0.066], quaternion: [-0.005, 0.006, -0.004, 1.000]}
   - {name: "coin_battery",      frame: "reference", position: [0.198, 0.092, -0.064], quaternion: [-0.001, -0.000, -0.009, 1.000]}
